@@ -12,6 +12,15 @@ Useful links for this project: <br>
 * [Installing TensorFlow on Windows](https://www.tensorflow.org/install/install_windows)
 * [TensorFlow official website](https://www.tensorflow.org/install/install_windows)
 
-
+Use the following commands to clone the tensorflow/models repository into your local computer. This will clone the folder **models** into your current folder. These instructions are specific to windows system.
+```
+git clone https://github.com/tensorflow/models.git 
+```
+Navigate into the **models/research** folder and add the current directory and **slim** directory into `PYTHONPATH`
+```
+set PYTHONPATH=%PYTHONPATH%;%cd%;%cd%\slim
+echo %PYTHONPATH%
+%PYTHONPATH%;C:\Users\...\models\research;C:\Users\...\models\research\slim
+```
 
 
