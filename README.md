@@ -8,7 +8,6 @@ Useful links for this project: <br>
 
 * [github repository for tensorflow models](https://github.com/tensorflow/models)
 * [Installation instructions](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md)
-* [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
 * [Installing TensorFlow on Windows](https://www.tensorflow.org/install/install_windows)
 * [TensorFlow official website](https://www.tensorflow.org/install/install_windows)
 
@@ -18,9 +17,32 @@ git clone https://github.com/tensorflow/models.git
 ```
 Navigate into the **models/research** folder and add the current directory and **slim** directory into `PYTHONPATH`
 ```
+cd models\research
 set PYTHONPATH=%PYTHONPATH%;%cd%;%cd%\slim
 echo %PYTHONPATH%
 %PYTHONPATH%;C:\Users\...\models\research;C:\Users\...\models\research\slim
 ```
+To confirm this type in the terminal inside `python` shell. This should show the two paths in the list.
+```
+python
+>>> import sys
+>>> sys.path
+```
+
+### Selecting a pre-complied model
+
+Useful links for models
+
+* [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
+
+We will use **ssd_mobilenet_v1_coco**, which is simplest and fastest pre-trained model.
+Download this model from the following link and extract inside *models\research\object_detection* directory.
+http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2017_11_17.tar.gz
+
+
+
+
+
+
 
 
