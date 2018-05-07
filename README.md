@@ -34,12 +34,25 @@ python
 Useful links for models
 
 * [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
+* [COCO : Common Objects in Context](http://cocodataset.org/#home)
+* [Arxiv: Microsoft COCO: Common Objects in Context paper, arXiv:1405.0312](https://arxiv.org/abs/1405.0312)
 
-We will use **ssd_mobilenet_v1_coco**, which is simplest and fastest pre-trained model.
+We will use **ssd_mobilenet_v1_coco**, which is simplest and fastest pre-trained model. This is trained with COCO dataset with **80 object categories**.
 Download this model from the following link and extract inside *models\research\object_detection* directory.
 http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2017_11_17.tar.gz
 
-
+Navigate to the extracted directory and locate these files.
+```
+cd ssd_mobilenet_v1_coco_2017_11_17
+checkpoint
+frozen_inference_graph.pb
+model.ckpt.data-00000-of-00001
+model.ckpt.index
+model.ckpt.meta
+saved_model/
+  saved_model.pb
+  variables/
+```
 
 
 
