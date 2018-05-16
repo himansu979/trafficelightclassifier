@@ -36,6 +36,7 @@ Useful links for pre-complied/pre-trained models
 
 * [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
 * [COCO : Common Objects in Context](http://cocodataset.org/#home)
+* [Object classes in MSCOCO dataset](https://stackoverflow.com/questions/42480371/i-want-to-know-if-there-is-the-clothing-object-class-in-the-ms-coco-dataset)
 * [Arxiv: Microsoft COCO: Common Objects in Context paper, arXiv:1405.0312](https://arxiv.org/abs/1405.0312)
 * [PASCAL VOC (Visual Object Classes) page](http://host.robots.ox.ac.uk/pascal/VOC/)
 
