@@ -65,11 +65,11 @@ Download and install Anaconda (Python 3+)
 
 Open the Anaconda Prompt and go to the labelImg directory
 
-conda install pyqt=5
-pyrcc5 -o resources.py resources.qrc
-python labelImg.py
-python labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
+1. conda install pyqt=5
+2. pyrcc5 -o resources.py resources.qrc
+3. python labelImg.py
+4. python labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
 
-
+4th step is not neccessary.
 
 
