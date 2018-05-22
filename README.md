@@ -23,7 +23,7 @@ set PYTHONPATH=%PYTHONPATH%;%cd%;%cd%\slim
 echo %PYTHONPATH%
 %PYTHONPATH%;C:\Users\...\models\research;C:\Users\...\models\research\slim
 ```
-To confirm this type in the terminal inside `python` shell. This should show the two paths in the list.
+To make sure that PATH is correctly set, type the following in the terminal inside `python` shell. The output should show the above two paths in the list.
 ```
 python
 >>> import sys
