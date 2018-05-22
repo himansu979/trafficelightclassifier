@@ -12,7 +12,7 @@ Useful links for this project: <br>
 * [Installing TensorFlow on Windows](https://www.tensorflow.org/install/install_windows)
 * [TensorFlow official website](https://www.tensorflow.org/install/install_windows)
 
-Check if tensorflow is installed or not and its current version
+Check if tensorflow is installed or not and its installed version (current version is **1.8.0** as of 05/22/2018.
 ```
 python
 >>> import tensorflow as tf
