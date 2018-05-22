@@ -67,6 +67,16 @@ ls
    variables/
 ```
 
+### Running the Object detection Demo
+
+Run the following jupyter notebook to classify objects in the image. You have to run this inside `research/object_detection` directory.
+https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb
+
+You can modify the parameter **MODEL_NAME** to try different models. This will use the images inside `object_detection\test_images`. Try experimenting with new images and extend the upper limit of `range(1, *)` (code block under Detection) to include new images.
+```
+MODEL_NAME = 'ssd_mobilenet_v1_coco_2017_11_17'
+```
+
 Installation Instruction for Step by Step TensorFlow Object Detection API Tutorial — Part 3: Creating Your Own Dataset
 
 Windows + Anaconda
