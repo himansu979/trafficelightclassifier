@@ -12,6 +12,14 @@ Useful links for this project: <br>
 * [Installing TensorFlow on Windows](https://www.tensorflow.org/install/install_windows)
 * [TensorFlow official website](https://www.tensorflow.org/install/install_windows)
 
+Check if tensorflow is installed or not and its current version
+```
+python
+>>> import tensorflow as tf
+>>> tf.__version__
+'1.7.0'
+```
+
 Use the following commands to clone the tensorflow/models repository into your local computer. This will clone the folder **models** into your current folder. These instructions are specific to windows system.
 ```
 git clone https://github.com/tensorflow/models.git 
