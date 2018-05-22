@@ -1,7 +1,7 @@
 # Traffic Light Classifier
 
 ### About this
-This tutorial is about creating tensorflow object detection model for traffic light classifier. This will identify traffice light in the image, and also it's state (green, yellow, red).
+This tutorial is about creating tensorflow object detection model for traffic light classifier. This will not only identify traffic lights in the image, but also it's state (ex: green, yellow, red).
 
 We will follow the source from medium post : [Step by Step TensorFlow Object Detection API Tutorial](https://medium.com/@WuStangDan/step-by-step-tensorflow-object-detection-api-tutorial-part-1-selecting-a-model-a02b6aabe39e)
 
