@@ -9,6 +9,7 @@ Useful links for this project: <br>
 
 * [github repository for tensorflow models](https://github.com/tensorflow/models)
 * [Installation instructions](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md)
+(inside models\research\object_detection\g3doc folder)
 * [Installing TensorFlow on Windows](https://www.tensorflow.org/install/install_windows)
 * [TensorFlow official website](https://www.tensorflow.org/install/install_windows)
 
