@@ -70,6 +70,7 @@ ls
 ### Running the Object detection Demo
 
 Run the following jupyter notebook to classify objects in the image. You have to run this inside `research/object_detection` directory.
+
 https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb
 
 You can modify the parameter **MODEL_NAME** to try different models. This will use the images inside `object_detection\test_images`. Try experimenting with new images and extend the upper limit of `range(1, *)` (code block under Detection) to include new images.
@@ -77,7 +78,20 @@ You can modify the parameter **MODEL_NAME** to try different models. This will u
 MODEL_NAME = 'ssd_mobilenet_v1_coco_2017_11_17'
 ```
 
-Installation Instruction for Step by Step TensorFlow Object Detection API Tutorial — Part 3: Creating Your Own Dataset
+### Part 2 : Creating TFRecord File from .yaml file
+
+The .yaml file contains *path* to the images and *boxes* for each object in the image. Each box contains *label* and bounding box co-ordinates (*x_max, x_min, y_max, y_min*) for each object.
+
+- Creating you own dataset : https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/using_your_own_dataset.md
+- https://github.com/swirlingsand/deeper-traffic-lights/blob/master/data_conversion_bosch.py
+
+modify `LABEL_DICT` to include the objects in your images, `INPUT_YAML=path to the .yaml file`. Make sure the `path:` inside the .yaml file points to the images.
+
+```
+python tf_record.py --output_path training.record
+```
+
+### TensorFlow Object Detection API Tutorial — Part 3: Creating Your Own Dataset
 
 Windows + Anaconda
 Download and install Anaconda (Python 3+)
