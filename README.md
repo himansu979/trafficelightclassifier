@@ -53,7 +53,7 @@ We will use **ssd_mobilenet_v1_coco**, which is simplest and fastest pre-trained
 Download this model from the following link and extract inside *models\research\object_detection* directory.
 http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2017_11_17.tar.gz
 
-Navigate to the extracted directory and locate these files.
+Navigate to the extracted directory and locate these files. Each pre-trained model contains a frozen inferefence graph (.pb file) and three checkpoint (.ckpt) files.
 ```
 cd ssd_mobilenet_v1_coco_2017_11_17/
 ls
