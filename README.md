@@ -115,4 +115,14 @@ Open the Anaconda Prompt and go to the labelImg directory
 
 4th step is not neccessary.
 
+Ubuntu + Anaconda(Python 3 ) :
+
+pip install PyQt5
+pyrcc5 -o resources.py resources.qrc
+pip install lxml
+python labelImg.py
+
+
+
+
 
