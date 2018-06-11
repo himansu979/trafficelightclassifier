@@ -90,6 +90,13 @@ modify `LABEL_DICT` to include the objects in your images, `INPUT_YAML=path to t
 ```
 python tf_record.py --output_path training.record
 ```
+*Note :
+
+Step 1) Create YAML file using : https://gist.github.com/WuStangDan/e2484a7d27fb5d9f2d9201a4adcf99ea#file-bosch-train-yaml
+Make sure space and indentation are correct
+
+Step 2) Script can be created by referring :
+https://github.com/swirlingsand/deeper-traffic-lights/blob/master/data_conversion_bosch.py
 
 ### TensorFlow Object Detection API Tutorial — Part 3: Creating Your Own Dataset
 
@@ -109,5 +116,18 @@ Open the Anaconda Prompt and go to the labelImg directory
 4. python labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
 
 4th step is not neccessary.
+
+Ubuntu + Anaconda(Python 3 ) :
+
+1. pip install PyQt5
+
+2. pyrcc5 -o resources.py resources.qrc
+
+3. pip install lxml
+
+4. python labelImg.py
+
+
+
 
 
