@@ -98,7 +98,7 @@ Make sure space and indentation are correct
 Step 2) Script can be created by referring :
 https://github.com/swirlingsand/deeper-traffic-lights/blob/master/data_conversion_bosch.py
 
-### TensorFlow Object Detection API Tutorial — Part 3: Creating Your Own Dataset
+### Part 3 : TensorFlow Object Detection API Tutorial - Creating Your Own Dataset
 
 LabelImg is a graphical image annotation tool and label object bounding boxes in image
 
@@ -126,6 +126,12 @@ Ubuntu + Anaconda(Python 3 ) :
 3. pip install lxml
 
 4. python labelImg.py
+
+This will generate an **.xml** file for each image containing annotations for all objects inside the image. TensorFlow provides a script to (**create_pascal_tf_record.py**) convert this xml to TFRecords format. 
+
+https://github.com/tensorflow/models/blob/master/research/object_detection/dataset_tools/create_pascal_tf_record.py
+
+### Part 4 : Training the Model
 
 
 
