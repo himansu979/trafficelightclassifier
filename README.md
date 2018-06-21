@@ -39,7 +39,7 @@ python
 >>> sys.path
 ```
 
-### Selecting a pre-complied model
+### Part 1 : Selecting a pre-complied model
 
 Useful links for pre-complied/pre-trained models
 
@@ -67,7 +67,7 @@ ls
    variables/
 ```
 
-### Running the Object detection Demo
+#### Running the Object detection Demo
 
 Run the following jupyter notebook to classify objects in the image. You have to run this inside `research/object_detection` directory.
 
@@ -205,6 +205,51 @@ model.ckpt-20.meta
 pipeline.config
 ssd_mobilenet_v1_coco.config
 ```
+```
+less training\checkpoint
+   model_checkpoint_path: "model.ckpt-20"
+   all_model_checkpoint_paths: "model.ckpt-0"
+   all_model_checkpoint_paths: "model.ckpt-20"
+```
+Make sure you have all the three files, .data, .index, .meta file for each checkpoint.
+To check the train loss in tensorboard, use the following command inside object_detection directory
+```
+tensorboard --logdir=training/
+```
+
+### Part 5 : Creating frozen_inference_graph.pb and Model Deployment
+
+inside object_detection directory, use the following to save the Model checkpoint as frozen inference graph.
+
+```
+python export_inference_graph.py --input_type=image_tensor --pipeline_config_path=training\ssd_mobilenet_v1_coco.config --trained_checkpoint_prefix=training\model.ckpt-20 --output_directory=fine_tuned_model
+```
+
+This will create a new directory fine_tuned_model inside object_detection, inside which you will find frozen_inference_graph.pb
+
+```
+ls fine_tuned_model\
+ checkpoint
+ frozen_inference_graph.pb
+ model.ckpt.data-00000-of-00001
+ model.ckpt.index
+ model.ckpt.meta
+ pipeline.config
+ saved_model
+```
+
+#### Model Deployment
+
+You can use the frozen_inference_graph.pb to detect other images. Modify the following parameters in the Jupyter notebook.
+```
+MODEL_NAME = 'fine_tuned_model'
+PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
+PATH_TO_LABELS = os.path.join('training/data', 'object-detection.pbtxt')
+NUM_CLASSES = 1
+```
+
+
+
 
 
 
