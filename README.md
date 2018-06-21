@@ -132,6 +132,7 @@ This will generate an **.xml** file for each image containing annotations for al
 https://github.com/tensorflow/models/blob/master/research/object_detection/dataset_tools/create_pascal_tf_record.py
 
 ### Part 4 : Training the Model
+For additional information, follow this blog post : http://androidkt.com/train-object-detection/
 
 
 
