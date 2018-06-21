@@ -149,13 +149,15 @@ label_map_path: "PATH_TO_BE_CONFIGURED/mscoco_label_map.pbtxt"
 batch_size: 24
 num_steps: 200000
 ```
+The parameter *num_steps* determines how many training steps you will run before finishing. This number really depends on the size of your dataset along with a number of other factors (including how long you are willing to let the model train for).
+
 After modification this should look like below
 ```
 num_classes: 1
 fine_tune_checkpoint: "ssd_mobilenet_v1_coco_2017_11_17/model.ckpt"
 input_path: "training/data/train.record"
 label_map_path: "training/data/object-detection.pbtxt"
-
+num_steps: 20
 ```
 object-detection.pbtxt should look like this:
 ```
@@ -186,4 +188,29 @@ Run the following command inside *object_detection* directory.
 ```
 python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training\ssd_mobilenet_v1_coco.config
 ```
+
+After training is finished, check the training directory.
+```
+   ls training\
+checkpoint
+data
+events.out.tfevents.1529606111.OX-LW10H82QDC2
+graph.pbtxt
+model.ckpt-0.data-00000-of-00001
+model.ckpt-0.index
+model.ckpt-0.meta
+model.ckpt-20.data-00000-of-00001
+model.ckpt-20.index
+model.ckpt-20.meta
+pipeline.config
+ssd_mobilenet_v1_coco.config
+```
+
+
+
+
+
+
+
+
 
