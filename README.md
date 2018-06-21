@@ -134,6 +134,8 @@ https://github.com/tensorflow/models/blob/master/research/object_detection/datas
 ### Part 4 : Training the Model
 For additional information, follow this blog post : http://androidkt.com/train-object-detection/
 
+model config file : https://github.com/tensorflow/models/blob/master/research/object_detection/samples/configs/ssd_mobilenet_v1_coco.config
+
 
 
 
