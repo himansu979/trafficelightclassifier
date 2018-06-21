@@ -127,9 +127,23 @@ Ubuntu + Anaconda(Python 3 ) :
 
 4. python labelImg.py
 
+#### Converting XML to TFRecord format
+
 This will generate an **.xml** file for each image containing annotations for all objects inside the image. TensorFlow provides a script to (**create_pascal_tf_record.py**) convert this xml to TFRecords format. 
 
 https://github.com/tensorflow/models/blob/master/research/object_detection/dataset_tools/create_pascal_tf_record.py
+
+Each dataset is required to have a label map associated with it. This label map defines a mapping from string class names to integer class Ids. Label maps should always start from id 1.
+
+create `label.pbtxt` with the following
+
+```
+item{
+        id:1
+        name: "trafficlight"
+}
+```
+
 
 ### Part 4 : Training the Model
 For additional information, follow this blog post : http://androidkt.com/train-object-detection/
