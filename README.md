@@ -164,6 +164,18 @@ item{
         name: "trafficlight"
 }
 ```
+
+Inside object_detection, create folder *training*.
+```
+ls training\
+  data\
+  ssd_mobilenet_v1_coco.config
+
+ls training\data\
+  object-detection.pbtxt
+  train.record
+```
+
 Go to te folder *models\research* and set the PATH
 ```
 set PYTHONPATH=%PYTHONPATH%;%cd%;%cd%\slim
