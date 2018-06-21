@@ -164,7 +164,14 @@ item{
         name: "trafficlight"
 }
 ```
-
-
-
+Go to te folder *models\research* and set the PATH
+```
+set PYTHONPATH=%PYTHONPATH%;%cd%;%cd%\slim
+echo %PYTHONPATH%
+%PYTHONPATH%;C:\Users\Desktop\models\research
+```
+Run the following command inside *object_detection* directory.
+```
+python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training\ssd_mobilenet_v1_coco.config
+```
 
