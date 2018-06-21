@@ -133,9 +133,37 @@ https://github.com/tensorflow/models/blob/master/research/object_detection/datas
 
 ### Part 4 : Training the Model
 For additional information, follow this blog post : http://androidkt.com/train-object-detection/
+For model training you need : pre-trained model config file, checkpoint file, label map file, TFRecord file
 
-model config file : https://github.com/tensorflow/models/blob/master/research/object_detection/samples/configs/ssd_mobilenet_v1_coco.config
+- pre-trained model config file : https://github.com/tensorflow/models/blob/master/research/object_detection/samples/configs/ssd_mobilenet_v1_coco.config
+- model checkpoint file (.ckpt files, 3 of them downloaded from the zip file of the model)
+- label map file : to map object labels to integer values
+- TFRecord file : created with the custom images, annotations and labels.
 
+Modify the following in the model config file:
+```
+num_classes: 90
+fine_tune_checkpoint: "PATH_TO_BE_CONFIGURED/model.ckpt"
+input_path: "PATH_TO_BE_CONFIGURED/mscoco_train.record"
+label_map_path: "PATH_TO_BE_CONFIGURED/mscoco_label_map.pbtxt"
+batch_size: 24
+num_steps: 200000
+```
+After modification this should look like below
+```
+num_classes: 1
+fine_tune_checkpoint: "ssd_mobilenet_v1_coco_2017_11_17/model.ckpt"
+input_path: "training/data/train.record"
+label_map_path: "training/data/object-detection.pbtxt"
+
+```
+object-detection.pbtxt should look like this:
+```
+item{
+        id:1
+        name: "trafficlight"
+}
+```
 
 
 
