@@ -66,6 +66,20 @@ ls
    saved_model.pb
    variables/
 ```
+#### Protobuf compilation
+
+Inside *models\research\object_detection\protos* folder, there are many `.proto` files. <br>
+If protobuf is not installed, use the link to download v3.4.0. https://github.com/google/protobuf/releases/tag/v3.4.0 <br>
+For windows, use *protoc-3.4.0-win32.zip*, unzip it and copy the protoc.exe file from bin folder and place inside models\research folder.
+```
+protoc --version
+   libprotoc 3.4.0
+```
+Inside *models\research* folder, use the following command
+```
+protoc object_detection\protos\*.proto --python_out=.
+```
+After this check again the *models\research\object_detection\protos* folder. For each .proto file, there is *_pb2.py* python file is created.
 
 #### Running the Object detection Demo
 
